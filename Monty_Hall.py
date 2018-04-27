@@ -31,18 +31,17 @@ def python_tester(count, switch_flag):
         #We generate a random number of random values, just to mess with the seed
         for i in range(random.randint(0,3)):
             random.randint(0,3)
-    print ("\n")
     return result
 
-print(f"Testing the scheme {str(count)} times, changing doors when asked\n")
+print(f"\nTesting the scheme {str(count)} times, changing doors when asked\n")
 start_time=time.time()
 switch = python_tester(count, True)
 time_switch = time.time() - start_time
 
-print(f"Testing the scheme {str(count)} times, NOT changing doors when asked\n")
+print(f"\nTesting the scheme {str(count)} times, NOT changing doors when asked\n")
 start_time=time.time()
 no_switch = python_tester(count, False)
 time_no_switch = time.time() - start_time
 
-print(f"Changing doors, we guessed right {switch} times on {count}, for a precision of {str((switch/count)*100)}; the simulation took {time_switch} seconds")
-print(f"Not Changing doors, we guessed right {no_switch} times on {count}, for a precision of {str((no_switch/count)*100)}; the simulation took {time_no_switch} seconds")
+print(f"\nChanging doors, we guessed right {switch} times on {count}, for a precision of {str((switch/count)*100)}\nthe simulation took {time_switch} seconds\n" )
+print(f"Not Changing doors, we guessed right {no_switch} times on {count}, for a precision of {str((no_switch/count)*100)}\nthe simulation took {time_no_switch} seconds\n")
